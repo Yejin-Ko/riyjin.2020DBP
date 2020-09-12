@@ -9,7 +9,7 @@
 
   $article = array(
     'title' => 'Welcome',
-    'description' => 'Database is ...'
+    'mood' => '이 노래의 분위기는 ...'
   );
 
   if( isset($_GET['id'])) {
@@ -18,7 +18,7 @@
     $row = mysqli_fetch_array($result);
     $article = array(
       'title' => $row['title'],
-      'description' => $row['description']
+      'mood' => $row['mood']
     );
   }
 
@@ -35,7 +35,7 @@
      <ol><?= $list ?></ol>
      <form action="process_create.php" method="POST">
        <p><input type="text" name="title" placeholder="title"></p>
-       <p><textarea name="description" placeholder="description"></textarea></p>
+       <p><textarea name="mood" placeholder="mood"></textarea></p>
        <p><input type="submit"></p>
      </form>
    </body>
