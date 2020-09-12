@@ -11,7 +11,7 @@
 
   $article = array(
     'title' => 'Welcome',
-    'description' => 'Database is ...'
+    'mood' => '이 노래의 분위기는 ...'
   );
 
   if( isset($_GET['id'])) {
@@ -20,7 +20,7 @@
     $row = mysqli_fetch_array($result);
     $article = array(
       'title' => $row['title'],
-      'description' => $row['description']
+      'mood' => $row['mood']
     );
   }
 
@@ -37,6 +37,6 @@
     <ol><?= $list ?></ol>
     <a href="create.php">create</a>
     <h2><?= $article['title'] ?></h2>
-    <?= $article['description'] ?>
+    <?= $article['mood'] ?>
   </body>
 </html>
