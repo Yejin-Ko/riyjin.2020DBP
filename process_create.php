@@ -2,10 +2,10 @@
   $link = mysqli_connect("localhost", "root", "YJ674700", "dbp");
   $query = "
     INSERT INTO music
-      (title, description, created)
+      (title, mood, created)
       VALUES (
         '{$_POST['title']}',
-        '{$_POST['description']}',
+        '{$_POST['mood']}',
         now()
         )
   ";
